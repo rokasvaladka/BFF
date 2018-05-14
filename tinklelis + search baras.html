@@ -1,204 +1,168 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        #myInput {
-            background-position: 10px 12px;
-            background-repeat: no-repeat;
-            font-size: 16px;
-            padding: 12px 20px 12px 40px;
-            border: 1px solid #ddd;
-            width: 200px;
-            position: center;
-            margin: 0 auto;
-            display: block;
-
-        }
-
-        #myUL {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #myUL li a {
-            border-bottom: 1px solid #ddd;
-            margin-top: -1px;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 18px;
-            color: black;
-            display: block
-        }
-
-        #myUL li a:hover:not(.header) {
-            background-color: #eee;
-        }
-        li {
-            float: left;
-            width: 33%;
-            padding: 10px 10px;
-            position: relative
-        }
-        ul {
-            width: 500px;
-            position: center;
-            display: block;
-        }
-        div {
-            display: block;
-        }
-        span.price {
-            position: absolute;
-            bottom: 30px;
-            left: 55px;
-        }
-        span.curr_units {
-            position: absolute;
-            bottom: 30px;
-            left: 95px;
-        }
-        img.thumb {
-            border-radius: 50%;
-            border: 1px solid #b5b5b5;
-            padding: 2px;
-        }
-        span.units {
-            font-size: x-small;
-            position: absolute;
-            bottom: 70px;
-            left:0;
-            right:0;
-            margin-left:auto;
-            margin-right:auto;
-        }
-        span.title {
-            color: #e3b40c;
-            font-weight: normal;
-            font-size: 1.45rem;
-        }
-        #bg-img {
-            border: none;
-            position: relative;
-            border-bottom: none;
-            background: url(http://bffmazmena.lt/custom/img/body-bg.png) no-repeat;
-            background-position: center -120px;
-            line-height: 1.42857143;
-            padding-left: 0;
-            padding-right: 0;
-            height: 350px;
-        }
-        #borderis {
-            width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-            height: 34px;
-            background: url(http://bffmazmena.lt/custom/img/separator_b.png) no-repeat center 0;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="tinklelis%20+%20search%20baras%20css.css">
 </head>
 <body>
 <div id="bg-img">
 </div>
 <div id="borderis"></div>
 <div style="width: 100%">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ieskoti..." title="Type in a name">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ieskoti...">
 </div>
 <div style="width: 100%">
     <ul id="myUL" style="margin: 0 auto">
-        <li><a>
-            <div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Apelsinai "Sanguinelli" (raudoni)</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Marokas</span><br><br>
-            <span class="price">0.70</span>
-            <span class="curr_units">€/kg.</span>
-        </div></a></li>
-        <li><a>
-            <div style="text-align: center; height: 250px">
-                <img src="../th_58c7a5d327fee.jpg" class="thumb">
-                <br>
-                <span style="text-align: center" class="title">Apelsinai Valencia</span><br>
-                <span style="text-align: center; font-size: small; color: gray">Egiptas</span><br><br>
-                <span class="price">0.44</span>
-                <span class="curr_units">€/kg.</span>
-            </div>
+        <li>
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg" >
+                    <br>
+                    <span class="title">Apelsinai "Sanguinelli" (raudoni)</span><br>
+                    <span class="from">Marokas</span><br><br>
+                    <span class="price">0.70</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
             </a>
         </li>
-        <li><a><div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Citrinos "Lamas"</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Turkija</span><br><br>
-            <span class="price">1.30</span>
-            <span class="curr_units">€/kg.</span>
-        </div></a></li>
-        <li><a><div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Laimo citrina</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Meksikas</span><br><br>
-            <span class="price">1.10</span>
-            <span class="curr_units">€/kg.</span>
-        </div></a></li>
-        <li><a><div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Greipfrutai raudoni "Star Ruby"</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Ispanija</span><br><br>
-            <span class="price">0.80</span>
-            <span class="curr_units">€/kg.</span>
-        </div></a></li>
-        <li><a><div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Mandarinai "Ortanique"</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Ispanija</span><br><br>
-            <span class="price">0.50</span>
-            <span class="curr_units">€/kg.</span>
-        </div></a></li>
-        <li><a><div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Kriaušės "Conference" 50-60</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Nyderlandai</span><br><br>
-            <span class="price">0.80</span>
-            <span class="curr_units">€/kg.</span>
-        </div></a></li>
-        <li style="position: relative"><a><div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Kriaušės Abate</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Argentina</span><br><br>
-            <span class="price" >1.40</span>
-            <span class="curr_units">€/kg.</span>
-        </div></a></li>
-        <li style="position: relative"><a><div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Kriaušės "Ya"</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Kinija</span><br><br>
-            <span class="price" >1.20</span>
-            <span class="curr_units" >€/kg.</span>
-        </div></a></li>
-        <li style="position: relative"><a><div style="text-align: center; height: 250px">
-            <img src="../th_58c7a5d327fee.jpg" class="thumb">
-            <br>
-            <span style="text-align: center" class="title">Vynuogės "Red Globe"</span><br>
-            <span style="text-align: center; font-size: small; color: gray">Peru</span><br><br>
-            <span class="price" >2.40</span>
-            <span class="curr_units" >€/vnt.</span>
-            <div style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
-                <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
-            </div>
-        </div></a></li>
+        <li>
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Apelsinai Valencia</span><br>
+                    <span class="from">Egiptas</span><br><br>
+                    <span class="price">0.44</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Citrinos "Lamas"</span><br>
+                    <span class="from">Turkija</span><br><br>
+                    <span class="price">1.30</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Laimo citrina</span><br>
+                    <span class="from">Meksikas</span><br><br>
+                    <span class="price">1.10</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Greipfrutai raudoni "Star Ruby"</span><br>
+                    <span class="from">Ispanija</span><br><br>
+                    <span class="price">0.80</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Mandarinai "Ortanique"</span><br>
+                    <span class="from">Ispanija</span><br><br>
+                    <span class="price">0.50</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Kriaušės "Conference" 50-60</span><br>
+                    <span class="from">Nyderlandai</span><br><br>
+                    <span class="price">0.80</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
+            </a>
+        </li>
+        <li style="position: relative">
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Kriaušės Abate</span><br>
+                    <span class="from">Argentina</span><br><br>
+                    <span class="price">1.40</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
+            </a>
+        </li>
+        <li style="position: relative">
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Kriaušės "Ya"</span><br>
+                    <span class="from">Kinija</span><br><br>
+                    <span class="price">1.20</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/kg.</span>
+                </div>
+            </a>
+        </li>
+        <li style="position: relative">
+            <a>
+                <div class="li-main-div">
+                    <img src="../th_58c7a5d327fee.jpg">
+                    <br>
+                    <span class="title">Vynuogės "Red Globe"</span><br>
+                    <span class="from">Peru</span><br><br>
+                    <span class="price">2.40</span>
+                    <div>
+                        <span class="units"><i>Parduodame vienetais po 0.5 kg</i></span>
+                    </div>
+                    <span class="curr_units">€/vnt.</span>
+                </div>
+            </a>
+        </li>
     </ul>
 </div>
 <script>
@@ -212,6 +176,7 @@
             a = li[i].getElementsByTagName("a")[0];
             if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
                 li[i].style.display = "";
+
             } else {
                 li[i].style.display = "none";
             }

@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+#myInput {
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    width: 200px;
+    position: center;
+    margin: 0 auto;
+    display: block;
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border-bottom: 3px solid #ddd;
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+}
+
+li {
+    float: left;
+    width: 25%;
+    padding: 10px 10px;
+    position: relative
+}
+
+ul {
+    width: 780px;
+    position: center;
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+span.price {
+    position: absolute;
+    bottom: 30px;
+    left: 55px;
+}
+
+span.curr_units {
+    position: absolute;
+    bottom: 30px;
+    left: 95px;
+}
+
+span.units {
+    font-size: x-small;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span.title {
+    color: #e3b40c;
+    font-weight: normal;
+    font-size: 1.45rem;
+    text-align: center
+}
+
+#bg-img {
+    position: relative;
+    border-bottom: none;
+    background: url(http://bffmazmena.lt/custom/img/body-bg.png) no-repeat;
+    background-position: center -120px;
+    line-height: 1.42857143;
+    padding-left: 0;
+    padding-right: 0;
+    height: 350px;
+}
+
+#borderis {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: 34px;
+    background: url(http://bffmazmena.lt/custom/img/separator_b.png) no-repeat center 0;
+}
+
+.li-main-div {
+    text-align: center;
+    height: 250px;
+}
+
+.from {
+    text-align: center;
+    font-size: small;
+    color: gray;
+}
+div.li-main-div > img {
+    border-radius: 50%;
+    border: 1px solid #b5b5b5;
+    padding: 2px;
+}
