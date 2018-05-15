@@ -117,3 +117,12 @@ div.li-main-div > img {
     height: 70px;
     margin: 0 auto;
 }
+div.menu-bar>a {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+.absolute-w-100 {
+    width: 100%;
+    position: absolute;
+}
