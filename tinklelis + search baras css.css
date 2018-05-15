@@ -112,3 +112,8 @@ div.li-main-div > img {
     border: 1px solid #b5b5b5;
     padding: 2px;
 }
+.menu-bar {
+    width: 500px;
+    height: 70px;
+    margin: 0 auto;
+}
