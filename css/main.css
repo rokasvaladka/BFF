@@ -1,15 +1,20 @@
 * {
     box-sizing: border-box;
+    margin: 1px 0px 1px 0px;
 }
 
 #myInput {
     font-size: 16px;
     padding: 12px 20px 12px 40px;
     border: 1px solid #ddd;
-    width: 200px;
+    width: 160px;
     position: center;
     margin: 0 auto;
     display: block;
+    background-image: url(../imgs/searchicon.png);
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    border-radius: 40%;
 }
 
 #myUL {
@@ -30,6 +35,9 @@
 
 #myUL li a:hover:not(.header) {
     background-color: #eee;
+}
+input:focus{
+    outline: none;
 }
 
 li {
@@ -113,16 +121,107 @@ div.li-main-div > img {
     padding: 2px;
 }
 .menu-bar {
-    width: 500px;
     height: 70px;
-    margin: 0 auto;
+    margin: 0 auto!important;
+    width: max-content;
 }
 div.menu-bar>a {
     width: 20%;
     float: left;
     text-align: center;
+    border: solid black 1px;
+    margin: 0 -1px;
 }
 .absolute-w-100 {
     width: 100%;
     position: absolute;
 }
+a {
+    text-decoration: none;
+}
+
+
+.buttons-coll {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+button {
+    margin: 20px;
+}
+
+.custom-btn {
+    padding: 10px 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.btn-4 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.btn-4 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-4:before, .btn-4:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+.btn-4:before {
+    height: 50%;
+    width: 2px;
+}
+
+.btn-4:after {
+    width: 20%;
+    height: 2px;
+}
+.btn-4:hover:before {
+    height: 100%;
+}
+
+.btn-4:hover:after {
+    width: 100%;
+}
+
+.btn-4 span:before, .btn-4 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+.btn-4 span:before {
+    width: 2px;
+    height: 50%;
+}
+
+.btn-4 span:after {
+    width: 20%;
+    height: 2px;
+}
+
+.btn-4 span:hover:before {height: 100%;}
+.btn-4 span:hover:after {width: 100%;}
