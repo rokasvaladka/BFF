@@ -2,6 +2,40 @@
     box-sizing: border-box;
     margin: 1px 0px 1px 0px;
 }
+.menu-bar {
+    height: 70px;
+    margin: 0 auto!important;
+    width: max-content;
+}
+div.menu-bar>a {
+    width: 20%;
+    float: left;
+    text-align: center;
+    border: solid black 1px;
+    margin: 0 -1px;
+}
+input:focus{
+    outline: none;
+}
+
+#bg-img {
+    position: relative;
+    border-bottom: none;
+    background: url(http://bffmazmena.lt/custom/img/body-bg.png) no-repeat;
+    background-position: center -120px;
+    line-height: 1.42857143;
+    padding-left: 0;
+    padding-right: 0;
+    height: 350px;
+}
+
+#borderis {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: 34px;
+    background: url(http://bffmazmena.lt/custom/img/separator_b.png) no-repeat center 0;
+}
 
 #myInput {
     font-size: 16px;
@@ -17,6 +51,15 @@
     border-radius: 40%;
 }
 
+div {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*-- Goods List --*/
 #myUL {
     list-style-type: none;
     padding: 0;
@@ -36,9 +79,7 @@
 #myUL li a:hover:not(.header) {
     background-color: #eee;
 }
-input:focus{
-    outline: none;
-}
+
 
 li {
     float: left;
@@ -50,10 +91,6 @@ li {
 ul {
     width: 780px;
     position: center;
-    display: block;
-}
-
-div {
     display: block;
 }
 
@@ -86,24 +123,6 @@ span.title {
     text-align: center
 }
 
-#bg-img {
-    position: relative;
-    border-bottom: none;
-    background: url(http://bffmazmena.lt/custom/img/body-bg.png) no-repeat;
-    background-position: center -120px;
-    line-height: 1.42857143;
-    padding-left: 0;
-    padding-right: 0;
-    height: 350px;
-}
-
-#borderis {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    height: 34px;
-    background: url(http://bffmazmena.lt/custom/img/separator_b.png) no-repeat center 0;
-}
 
 .li-main-div {
     text-align: center;
@@ -120,26 +139,11 @@ div.li-main-div > img {
     border: 1px solid #b5b5b5;
     padding: 2px;
 }
-.menu-bar {
-    height: 70px;
-    margin: 0 auto!important;
-    width: max-content;
-}
-div.menu-bar>a {
-    width: 20%;
-    float: left;
-    text-align: center;
-    border: solid black 1px;
-    margin: 0 -1px;
-}
+
 .absolute-w-100 {
     width: 100%;
     position: absolute;
 }
-a {
-    text-decoration: none;
-}
-
 
 .buttons-coll {
     width: 100%;
@@ -148,9 +152,10 @@ a {
 }
 
 button {
-    margin: 20px;
+    margin: 10px;
 }
-
+/*-- Goods List END--*/
+/*-- Menu style --*/
 .custom-btn {
     padding: 10px 25px;
     font-family: 'Roboto', sans-serif;
@@ -163,22 +168,22 @@ button {
     display: inline-block;
 }
 
-.btn-4 {
-    width: 130px;
+.btn-1 {
+    width: 180px;
     height: 40px;
     line-height: 42px;
     padding: 0;
     border: none;
 }
 
-.btn-4 span {
+.btn-1 span {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.btn-4:before, .btn-4:after {
+.btn-1:before, .btn-1:after {
     position: absolute;
     content: "";
     right: 0;
@@ -187,24 +192,24 @@ button {
     transition: all 0.3s ease;
 }
 
-.btn-4:before {
+.btn-1:before {
     height: 50%;
     width: 2px;
 }
 
-.btn-4:after {
+.btn-1:after {
     width: 20%;
     height: 2px;
 }
-.btn-4:hover:before {
+.btn-1:hover:before {
     height: 100%;
 }
 
-.btn-4:hover:after {
+.btn-1:hover:after {
     width: 100%;
 }
 
-.btn-4 span:before, .btn-4 span:after {
+.btn-1 span:before, .btn-1 span:after {
     position: absolute;
     content: "";
     left: 0;
@@ -213,15 +218,21 @@ button {
     transition: all 0.3s ease;
 }
 
-.btn-4 span:before {
+.btn-1 span:before {
     width: 2px;
     height: 50%;
 }
 
-.btn-4 span:after {
+.btn-1 span:after {
     width: 20%;
     height: 2px;
 }
 
-.btn-4 span:hover:before {height: 100%;}
-.btn-4 span:hover:after {width: 100%;}
+.btn-1 span:hover:before {
+    height: 100%;
+}
+
+.btn-1 span:hover:after {
+    width: 100%;
+}
+/*-- Menu style END --*/
