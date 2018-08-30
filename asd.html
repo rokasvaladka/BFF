@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background-color: cadetblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .empty {
+            display: inherit;
+            height: 160px;
+            width: 160px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 3px salmon solid;
+            background-color: white;
+            vertical-align: top;
+        }
+
+        .fill {
+            background-color: firebrick;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            border-radius: 10px;
+            top: 5px;
+            left: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 36px;
+            white-space:normal;
+        }
+
+        .hold {
+            border: solid black 4px;
+        }
+
+        .invisible {
+            display: none;
+        }
+
+        .hovered {
+            background: #f4f4f4;
+            border-style: dashed;
+        }
+
+        button {
+            background-color: darkgray;
+            border: black solid 1px;
+            position: absolute;
+            height:24px;
+            width: 60px;
+            top:170px;
+            left: 120px;
+            text-align: center;
+        }
+
+        form {
+            position: absolute;
+            text-align: center;
+            font-size: 16px;
+            background-color:darkgoldenrod;
+            width:300px;
+            height: 200px;
+            top:30%;
+            left:42%;
+        }
+
+        input {
+            height: 20px;
+            width: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<form action="" method="POST" autocomplete="off">
+    <br />Enter the number of weeks<br />
+    <input type="text" name="Number of weeks" id="a" value="" size="5" />
+    <br />Enter the week of production<br />
+    <input type="text" name ="Week of production" id="b" value="" size="5" />
+    <br />Enter the number of products<br />
+    <input type="text" name="Number of products" id="c" value="" size="5" /><br />
+    <button type="button" onclick="generateGrid()">OK</button>
+</form>
+<script>
+
+    function generateGrid() {
+
+        var gridItems = document.getElementById("a").value;
+        var firstItem = document.getElementById("b").value;
+        var itemNo = parseInt(document.getElementById("c").value, 10);
+
+        //Grid creation
+        if ((gridItems > 0) & (firstItem > 0) & (itemNo > 0)) {
+
+            }
+            newDiv = '<div class="container">';
+            emptyNumber = 0;
+            for (i = 0; (i < gridItems); i++) {
+                if (i + 1 == firstItem) {
+                    emptyNumber++;
+                    newDiv += '<div class="empty" data-value="0" id="i + 1'
+                    newDiv += emptyNumber;
+                    newDiv += '"><div class = "fill" draggable = "true" data-value="';
+                    newDiv += itemNo;
+                    newDiv += '" id=';
+                    newDiv += (i + 1);
+                    newDiv += '>'
+                    newDiv += itemNo;
+                    newDiv += '</div ></div > ';
+                } else {
+                    emptyNumber++;
+                    newDiv += '<div class="empty" id ="'
+                    newDiv += emptyNumber;
+                    newDiv += '" data - value="0" ></div >';
+                }
+            }
+            newDiv += '</div>';
+            document.body.innerHTML = newDiv;
+
+            for (x = 0; x < 3; x++) {
+                document.body.insertAdjacentHTML('afterend', newDiv);
+            }
+
+            //document.body.insertAdjacentHTML('afterend', '<div>ABCD</div>');
+
+
+            //Constants for loop
+            const fills = document.querySelectorAll('.fill');
+            const empties = document.querySelectorAll('.empty');
+
+            // Fill listeners
+            for (const fill of fills) {
+                fill.addEventListener('dragstart', dragStart);
+                fill.addEventListener('dragend', dragEnd);
+            }
+
+            calculateValues();
+
+            // Loop through empty boxes and add listeners
+            for (const empty of empties) {
+                empty.addEventListener('dragover', dragOver);
+                empty.addEventListener('dragenter', dragEnter);
+                empty.addEventListener('dragleave', dragLeave);
+                empty.addEventListener('drop', dragDrop);
+            }
+
+            // Drag Functions
+
+            function dragStart() {
+                this.className += ' hold';
+                setTimeout(() => (this.className = 'invisible'), 0);
+            }
+
+            function dragEnd() {
+                this.className = 'fill';
+            }
+
+            function dragOver(e) {
+                e.preventDefault();
+            }
+
+            function dragEnter(e) {
+                e.preventDefault();
+                this.className += ' hovered';
+            }
+
+            function dragLeave() {
+                this.className = 'empty';
+            }
+
+            function dragDrop() {
+                this.className = 'empty';
+                for (const fill of fills) {
+                    if (fill.className == "invisible") {
+                        this.append(fill);
+                        emptyId = this.getAttribute('id');
+                        fill.setAttribute('id', emptyId);
+                    }
+                }
+                calculateValues();
+            }
+
+            // Value calculation function
+
+            function calculateValues() {
+                var sum_1 = 0;
+                var sum_2 = 0;
+                var sum_3 = 0;
+                var sum_4 = 0;
+                for (const fill of fills) {
+                    fillValue = parseInt(fill.getAttribute('data-value'), 10);
+                    fillId = fill.getAttribute('id');
+                    if (fillId == 1) {
+                        sum_1 += fillValue;
+                    }
+                    else if (fillId == 2) {
+                        sum_2 += fillValue;
+                    }
+                    else if (fillId == 3) {
+                        sum_3 += fillValue;
+                    }
+                    else if (fillId == 4) {
+                        sum_4 += fillValue
+                    }
+                }
+                console.log(sum_1);
+                console.log(sum_2);
+                console.log(sum_3);
+                console.log(sum_4);
+            }
+        }
+        else {
+            alert("All values must be positive.");
+        }
+    }
+
+
+</script>
+</body>
+</html>

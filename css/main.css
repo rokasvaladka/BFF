@@ -58,7 +58,10 @@ div {
 a {
     text-decoration: none;
 }
-
+.flags {
+    width: 45px;
+    height: 30px;
+}
 /*-- Goods List --*/
 #myUL {
     list-style-type: none;
